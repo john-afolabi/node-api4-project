@@ -3,6 +3,8 @@ const cors = require("cors");
 const helmet = require("helmet");
 
 const server = express();
+
+server.use(express.static("client/build"));
 server.use(express.json());
 server.use(helmet());
 server.use(cors());
